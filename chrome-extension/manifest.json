@@ -1,0 +1,20 @@
+{
+	"content_scripts": [{
+		"js": [ "jquery.min.js", "socket.io.min.js", "contentscript.js"],
+		"css": [ "style.css" ],
+		"matches": [ "http://helpdesk.sourceot.com/*" ]
+	}],
+	"background":
+	{
+		"scripts": ["jquery.min.js", "backgroundscript.js"]
+	},
+	"description": "Source Helpdesk Tweaks",
+	"name": "Source Helpdesk Tweaks",
+	"version": "1.0.1.6",
+	"manifest_version": 2,
+	"permissions": ["notifications", "http://*/", "https://sourceot.freshdesk.com/*", "http://sourceot.freshdesk.com/*", "cookies"],
+	"icons": {
+		"16": "icon-16.png",
+		"128": "icon-128.png"
+	}
+}

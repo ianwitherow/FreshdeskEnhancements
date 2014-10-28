@@ -1,0 +1,15 @@
+{
+  "name": "HelpdeskTweaks-Server",
+  "version": "0.0.1",
+  "description": "Server for helpdesk related things, such as communication",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "Ian",
+  "license": "BSD-2-Clause",
+  "dependencies": {
+    "socket.io": "~1.1.0"
+  }
+}

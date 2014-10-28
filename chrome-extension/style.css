@@ -1,0 +1,368 @@
+.text-danger {
+	color: #DD5549;
+}
+.text-success {
+	color: #15941f;
+}
+
+/* Bootstrap stuff */
+
+		.clearfix:before,
+		.clearfix:after {
+			content: " ";
+			display: table;
+		}
+
+		.clearfix:after,
+		.container:after {
+			clear: both;
+		}
+
+		.btn {
+			display: inline-block;
+			margin-bottom: 0;
+			font-weight: normal;
+			text-align: center;
+			vertical-align: middle;
+			cursor: pointer;
+			background-image: none;
+			border: 1px solid transparent;
+			white-space: nowrap;
+			padding: 6px 12px;
+			font-size: 14px;
+			line-height: 1.42857143;
+			border-radius: 4px;
+			-webkit-user-select: none;
+			-moz-user-select: none;
+			-ms-user-select: none;
+			user-select: none;
+			text-decoration: none;
+		}
+
+		.btn-primary {
+			color: #ffffff;
+			background-color: #428bca;
+			border-color: #357ebd;
+		}
+
+			.btn-primary:hover,
+			.btn-primary:focus,
+			.btn-primary:active,
+			.btn-primary.active {
+				color: #ffffff;
+				background-color: #3071a9;
+				border-color: #285e8e;
+			}
+
+		.input-group {
+			position: relative;
+			display: table;
+			border-collapse: separate;
+		}
+
+			.input-group .form-control {
+				position: relative;
+				z-index: 2;
+				float: left;
+				width: 100%;
+				margin-bottom: 0;
+			}
+
+			.input-group-addon,
+			.input-group-btn,
+			.input-group .form-control {
+				display: table-cell;
+			}
+
+				.input-group-addon:not(:first-child):not(:last-child),
+				.input-group-btn:not(:first-child):not(:last-child),
+				.input-group .form-control:not(:first-child):not(:last-child) {
+					border-radius: 0;
+				}
+
+		.input-group-addon,
+		.input-group-btn {
+			width: 1%;
+			white-space: nowrap;
+			vertical-align: middle;
+		}
+
+			.input-group .form-control:first-child,
+			.input-group-addon:first-child,
+			.input-group-btn:first-child > .btn,
+			.input-group-btn:first-child > .btn-group > .btn,
+			.input-group-btn:first-child > .dropdown-toggle,
+			.input-group-btn:last-child > .btn:not(:last-child):not(.dropdown-toggle),
+			.input-group-btn:last-child > .btn-group:not(:last-child) > .btn {
+				border-bottom-right-radius: 0;
+				border-top-right-radius: 0;
+			}
+
+		.input-group-btn {
+			position: relative;
+			font-size: 0;
+			white-space: nowrap;
+		}
+
+			.input-group-btn > .btn {
+				position: relative;
+			}
+
+				.input-group-btn > .btn + .btn {
+					margin-left: -1px;
+				}
+
+				.input-group-btn > .btn:hover,
+				.input-group-btn > .btn:focus,
+				.input-group-btn > .btn:active {
+					z-index: 2;
+				}
+
+			.input-group-btn:first-child > .btn,
+			.input-group-btn:first-child > .btn-group {
+				margin-right: -1px;
+			}
+
+			.input-group-btn:last-child > .btn,
+			.input-group-btn:last-child > .btn-group {
+				margin-left: -1px;
+			}
+
+		.input-group-lg > .form-control,
+		.input-group-lg > .input-group-addon,
+		.input-group-lg > .input-group-btn > .btn {
+			height: 46px;
+			padding: 10px 16px;
+			font-size: 18px;
+			line-height: 1.33;
+			border-radius: 6px;
+		}
+
+		.btn-group > .btn:last-child:not(:first-child),
+		.btn-group > .dropdown-toggle:not(:first-child) {
+			border-bottom-left-radius: 0;
+			border-top-left-radius: 0;
+		}
+
+		.input-group .form-control:last-child,
+		.input-group-addon:last-child,
+		.input-group-btn:last-child > .btn,
+		.input-group-btn:last-child > .btn-group > .btn,
+		.input-group-btn:last-child > .dropdown-toggle,
+		.input-group-btn:first-child > .btn:not(:first-child),
+		.input-group-btn:first-child > .btn-group:not(:first-child) > .btn {
+			border-bottom-left-radius: 0;
+			border-top-left-radius: 0;
+		}
+
+		.btn-group > .btn-group {
+			float: left;
+		}
+
+		.form-control {
+			display: block;
+			width: 100%;
+			height: 34px;
+			font-size: 14px;
+			line-height: 1.42857143;
+			color: #555555;
+			background-color: #ffffff;
+			background-image: none;
+			border: 1px solid #cccccc;
+			border-radius: 4px;
+			-webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+			box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+			-webkit-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+			-o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+			transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+			box-sizing: border-box;
+			color: #555;
+			padding: 5px 1px 5px 4px;
+			font-size: 14px;
+		}
+
+
+
+
+/* End of bootstrap stuff */
+
+
+.agent-collision-user {
+	padding-top: 5px;
+	cursor: pointer;
+}
+.agent-collision-user:hover {
+	text-decoration: underline;
+}
+
+
+/* Chat stuff */
+#helpdesk-chat {
+	position: fixed;
+	bottom: 0;
+	right: 0;
+	z-index: 9999;
+}
+
+.helpdesk-chat-container {
+	position: relative;
+}
+
+.helpdesk-users ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	display: inline;
+}
+
+
+.helpdesk-users ul li.agent-offline,
+.helpdesk-users ul li.agent-online {
+	position: relative;
+}
+
+.helpdesk-users ul li span.offline,
+.helpdesk-users ul li span.online {
+	position: absolute;
+	top: initial;
+	bottom: 11px;
+	left: 8px;
+}
+
+.helpdesk-users ul li.agent-offline .offline {
+	display: block;
+}
+.helpdesk-users ul li.agent-online .online {
+	display: block;
+}
+.helpdesk-users ul li.agent-online .offline {
+	display: none;
+}
+.helpdesk-users ul li.agent-offline .online {
+	display: none;
+}
+
+.helpdesk-users ul li.agent-offline {
+	opacity: .5;
+}
+.helpdesk-users ul li .offline,
+.helpdesk-users ul li .online {
+	left: 0;
+	top: 0;
+}
+
+.helpdesk-users ul li:hover {
+	background-color: #D9E8F0;
+}
+.helpdesk-users ul li.active {
+	background-color: #6EBDE5;
+	border-radius: 3px;
+}
+
+.helpdesk-users ul li a {
+	display: block;
+	padding: 10px;
+}
+
+.helpdesk-users ul li a img {
+	width: 30px;
+}
+
+.helpdesk-users {
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	padding: 5px;
+	background-color: #eee;
+	border: 1px solid #ddd;
+	border-radius: 2px;
+}
+
+.helpdesk-chat-window {
+	position: absolute;
+	bottom: 0;
+	right: 62px;
+	height: 400px;
+	width: 280px;
+	border: 1px solid #aaa;
+	border-radius: 2px;
+	background-color: #f0f0f0;
+	display: none;
+}
+
+.helpdesk-chat-window .chat-window-header {
+	padding: 10px;
+	border-bottom: 1px solid #ccc;
+	background-color: #5a5a5a;
+	border-bottom-left-radius: 3px;
+	border-bottom-right-radius: 3px;
+}
+.helpdesk-chat-window .chat-window-header h3.agent-name {
+	color: #fff !important;
+}
+
+.helpdesk-chat-window .chat-window-header h3.agent-name {
+	margin: 0;
+	float: left;
+	font-size: 18px;
+}
+
+.helpdesk-chat-window .chat-window-header .close {
+	float: right;
+	color: #ddd;
+	text-decoration: none;
+	font-size: 22px;
+	position: relative;
+	top: 3px;
+}
+
+.helpdesk-chat-window .chat-messages {
+	display: none;
+	height: 300px;
+	overflow-y: auto;
+	padding: 10px;
+}
+.helpdesk-chat-window .chat-messages.offline {
+	opacity: .6;
+}
+
+.helpdesk-chat-window .chat-messages .message {
+	width: 100%;
+	position: relative;
+}
+
+.helpdesk-chat-window .chat-messages .message-to {
+	float: right;
+}
+
+.helpdesk-chat-window .chat-messages .message-to img {
+	float: right;
+}
+
+.helpdesk-chat-window .chat-messages .message-text {
+	display: inline-block;
+	background-color: #fff;
+	padding: 6px;
+	border: 1px solid #cfcfcf;
+	border-radius: 5px;
+	font-size: 0.9em;
+	line-height: 1.15;
+}
+
+.helpdesk-chat-window .chat-messages .message-from {
+	float: left;
+}
+
+.helpdesk-chat-window .chat-input {
+	position: absolute;
+	bottom: 0;
+}
+.helpdesk-chat-window .chat-input input {
+	padding: 16px;
+}
+
+.helpdesk-chat-window .chat-input .btn {
+	padding: 8px;
+}
+
+/* End of chat stuff */
