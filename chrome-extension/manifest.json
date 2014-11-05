@@ -10,7 +10,7 @@
 	},
 	"description": "Source Helpdesk Tweaks",
 	"name": "Source Helpdesk Tweaks",
-	"version": "1.0.1.6",
+	"version": "1.0.1.7",
 	"manifest_version": 2,
 	"permissions": ["notifications", "http://*/", "https://sourceot.freshdesk.com/*", "http://sourceot.freshdesk.com/*", "cookies"],
 	"icons": {

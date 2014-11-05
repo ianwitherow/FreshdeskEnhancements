@@ -1,21 +1,25 @@
 var helpdeskUrl = "http://helpdesk.sourceot.com";
 var apiUrl = "https://sourceot.freshdesk.com";
-var apiKey = "XXXXXXXXXXXXXXXXXXXX"; //Enter your API key here
+var apiKey = "OZGKO6ITUrmc9FhcbN45"; //Enter your API key here
 
 var allTicketsUrl = helpdeskUrl + "/helpdesk/tickets/filter/all_tickets?format=json";
 var knownTickets = []; //Tickets we already know about; don't show notifications for any of these.
 var checkInterval = 120000; //2 minutes
 var createdNotifications = [];
+var ticket_filter_cookie;
 
 function AllTickets(callback) {
 	//Save current filter since calling this url sets the cookie to 'all tickets'
 	cookies.get("filter_name", function(cookie) {
-		jQuery.getJSON(allTicketsUrl, function(tickets) {
-			callback(tickets);
-			if (cookie) {
-				cookies.set("filter_name", cookie.value);
-			}
-		});
+		if (cookie) {
+			ticket_filter_cookie = cookie.value;
+		}
+		if (ticket_filter_cookie) {
+			jQuery.getJSON(allTicketsUrl, function(tickets) {
+				callback(tickets);
+				cookies.set("filter_name", ticket_filter_cookie);
+			});
+		}
 	});
 }
 
