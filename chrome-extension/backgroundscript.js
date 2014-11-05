@@ -4,7 +4,7 @@ var apiKey = "OZGKO6ITUrmc9FhcbN45"; //Enter your API key here
 
 var allTicketsUrl = helpdeskUrl + "/helpdesk/tickets/filter/all_tickets?format=json";
 var knownTickets = []; //Tickets we already know about; don't show notifications for any of these.
-var checkInterval = 120000; //2 minutes
+var checkInterval = 30000; //30 seconds
 var createdNotifications = [];
 var ticket_filter_cookie;
 
