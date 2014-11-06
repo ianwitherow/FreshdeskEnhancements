@@ -1,24 +1,24 @@
-var helpdeskUrl = "http://helpdesk.sourceot.com";
-var apiUrl = "https://sourceot.freshdesk.com";
-var apiKey = "OZGKO6ITUrmc9FhcbN45"; //Enter your API key here
+var helpdeskUrl = "http://helpdesk.mydomain.com"; //This is the URL you actually use (e.g., a custom domain). If you don't use a custom domain, set it to https://domain.freshdesk.com
+var apiUrl = "https://domain.freshdesk.com"; //This is just domain.freshdesk.com
+var apiKey = "XXXXXXXXXXXXXXXXXXXX"; //Enter your API key here
 
-var allTicketsUrl = helpdeskUrl + "/helpdesk/tickets/filter/all_tickets?format=json";
+var allTicketsUrl = apiUrl + "/helpdesk/tickets/filter/all_tickets?format=json";
 var knownTickets = []; //Tickets we already know about; don't show notifications for any of these.
 var checkInterval = 30000; //30 seconds
 var createdNotifications = [];
-var ticket_filter_cookie;
 
 function AllTickets(callback) {
-	//Save current filter since calling this url sets the cookie to 'all tickets'
-	cookies.get("filter_name", function(cookie) {
-		if (cookie) {
-			ticket_filter_cookie = cookie.value;
-		}
-		if (ticket_filter_cookie) {
-			jQuery.getJSON(allTicketsUrl, function(tickets) {
-				callback(tickets);
-				cookies.set("filter_name", ticket_filter_cookie);
-			});
+	jQuery.ajax({
+		type: "GET",
+		url: allTicketsUrl,
+		contentType: "application/json",
+		headers: {
+			"Authorization": "Basic " + btoa(apiKey+":X"),
+			"Accept": "application/json, text/javascript, */*; q=0.01"
+		},
+		complete: function(response) {
+			var tickets = JSON.parse(response.responseText);
+			callback(tickets);
 		}
 	});
 }
@@ -165,11 +165,3 @@ chrome.runtime.onMessage.addListener(function(request, sender, sendResponse) {
 	}
 });
 
-var cookies = {
-	get: function(name, callback) {
-		chrome.cookies.get({ name: name, url: helpdeskUrl }, callback);
-	},
-	set: function(name, value) {
-		chrome.cookies.set({ name: name, value: value, url: helpdeskUrl });
-	}
-}
