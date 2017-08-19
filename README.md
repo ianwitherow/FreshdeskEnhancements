@@ -1,3 +1,5 @@
+**This is super old and no longer maintained.**
+
 # Freshdesk Enhancements
 
 Freshdesk Enhancements is a Chrome extension that adds functionality to Freshdesk.
